@@ -99,4 +99,26 @@ function maxBetween(a, b){
 maxBetween(10, 12);
 maxBetween(12, 10);
 
+// using switch case
+function maxBetween(a, b){
+    let maxValue;
+    switch(a < b){
+        case true:
+            maxValue = `${b} is max`
+            break;
+        case false:
+            maxValue = `${a} is max`
+            break;
+    }
+    console.log(maxValue);
+}
+maxBetween(10, 12);
+maxBetween(12, 10);
 
+// using ternary operator
+function maxBetween(a, b){
+    let maxValue = a > b ? `${a} is max` : `${b} is max`;
+    console.log(maxValue);
+}
+maxBetween(10, 12);
+maxBetween(12, 10);
