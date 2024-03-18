@@ -1,0 +1,102 @@
+// ======== ======== Problem-01
+// using if else 
+function checkEvenOdd(num){
+    let number;
+    if(num % 2 === 0){
+        number = `${num} is a even`;
+    } else {
+        number = `${num} is a odd`;
+    }
+    console.log(number);
+}
+checkEvenOdd(10);
+checkEvenOdd(11);
+
+// using switch case
+function checkEvenOdd(num){
+    let number;
+    switch(num % 2) {
+        case 0: 
+            number = `${num} is a even`;
+            break;
+        case 1:
+            number = `${num} is an odd`;
+            break;
+        default:
+            number = 'Invalid input';
+    }
+    console.log(number);
+}
+checkEvenOdd(10);
+checkEvenOdd(11);
+
+// using ternary operators
+function checkEvenOdd(num){
+    let number = num % 2 === 0 ? `${num} is even` : `${num} is odd`;
+    console.log(number);
+}
+checkEvenOdd(10);
+checkEvenOdd(11);
+
+// ======== ======== Problem-02
+// using if else
+function checkNegativePositive(num){
+    let number;
+    if(num > 0){
+        number = `${num} is positive`
+    } else if(num < 0){
+        number = `${num} is negative`
+    } else{
+        number = `${num} is neither positive nor negative`
+    }
+    console.log(number);
+}
+checkNegativePositive(3);
+checkNegativePositive(-3);
+checkNegativePositive(0);
+
+// using switch case
+function checkNegativePositive(num){
+    let number;
+    switch(Math.sign(num)) {
+        case 1:
+            number = `${num} is positive`
+            break;
+        case -1:
+            number = `${num} is negative`
+            break;
+        case 0:
+            number = `${num} is neither positive nor negative`
+    }
+    console.log(number);
+}
+checkNegativePositive(3);
+checkNegativePositive(-3);
+checkNegativePositive(0);
+
+// using ternary operator
+function checkNegativePositive(num){
+    let number = num > 0 ? `${num} is positive` :
+                    num < 0 ? `${num} is negative`:
+                        `${num} is neither negative or positive`;
+    console.log(number);
+}
+checkNegativePositive(3);
+checkNegativePositive(-3);
+checkNegativePositive(0);
+
+// ======== ======== Problem-03
+// using if else
+function maxBetween(a, b){
+    let maxValue;
+    if(a > b){
+        maxValue = `${a} is max`
+    } else{
+        maxValue = `${b} is max`
+    }
+    console.log(maxValue);
+}
+maxBetween(10, 12);
+maxBetween(12, 10);
+
+
