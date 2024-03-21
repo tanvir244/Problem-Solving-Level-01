@@ -1,0 +1,131 @@
+// ======== ======== Problem-01
+function oneToHundred(){
+    for(let i = 1; i <= 100; i++){
+        console.log(i)
+    }
+}
+oneToHundred();
+
+// ======== ======== Problem-02
+function HundredToOne(){
+    for(let i = 100; i > 0; i--){
+        console.log(i);
+    }
+}
+HundredToOne();
+
+// ======== ======== Problem-03
+function sumAverage(){
+    const elements = [];
+    let sum = 0;
+    for(let i = 1; i <= 100; i++){
+        sum = sum + i;
+        elements.push(i);
+    }
+    const average = sum / elements.length;
+    console.log('sum:', sum);
+    console.log('Average:', average);
+}
+sumAverage();
+
+// ======== ======== Problem-04
+function checkEvenOdd(){
+    let even = [];
+    let odd = [];
+    for(let i = 100; i <= 200; i++){
+        if(i % 2 === 0){
+            even.push(i);
+        } else{
+            odd.push(i);
+        }
+    }
+    console.log('Even Numbers:', even);
+    console.log('Odd Numbers:', odd);
+}
+checkEvenOdd();
+
+// ======== ======== Problem-05
+function sumEvenOdd(){
+    let sumEven = 0;
+    let sumOdd = 0;
+    for(let i = 0; i <= 100; i++){
+        if(i % 2 === 0){
+            sumEven = sumEven + i;
+        } else {
+            sumOdd = sumOdd + i;
+        }
+    }
+    console.log('Sum of Even numbers:', sumEven);
+    console.log('Sum of Odd numbers:', sumOdd);
+}
+sumEvenOdd();
+
+// ======== ======== Problem-06
+function isLeapYear(){
+    let leapYear = [];
+    let NotLeapYear = [];
+    for(let i = 1800; i <= 2000; i++){
+        if((i % 4 === 0 && i % 100 !== 0) || i % 400 === 0){
+            leapYear.push(i);
+        } else {
+            NotLeapYear.push(i);
+        }
+    }
+    console.log('Leap Year:', leapYear);
+    console.log('Not Leap Year:', NotLeapYear);
+}
+isLeapYear();
+
+// ======== ======== Problem-07
+function multiplicationTable(num){
+    for(let i = 0; i <= 10; i++){
+        let table = `${num} X ${i} = ${num * i}`;
+        console.log(table);
+    }
+}
+multiplicationTable(12);
+
+// ======== ======== Problem-08
+function factorial(num) {
+    let result = 1;
+    for (let i = 1; i <= num; i++) {
+        result = result * i;
+    }
+    console.log(result);
+}
+factorial(6);
+
+// ======== ======== Problem-09
+function findDivisors(num) {
+    const divisors = [];
+    for(let i = 1; i <= num; i++){
+        if(num % i === 0){
+            divisors.push(i);
+        }
+    }
+    console.log(divisors);
+}
+findDivisors(12);
+
+// ======== ======== Problem-10
+function findFirstAndLastDigit(num){
+    let numString = num.toString();
+    let digitArray = numString.split('');
+    const firstElement = digitArray[0];
+    const lastElement = digitArray[digitArray.length - 1];
+    console.log('First Element:', firstElement);
+    console.log('Last Element:', lastElement);
+}
+findFirstAndLastDigit(315245);
+
+// ======== ======== Problem-11
+function sumOfEachDigit(num){
+    const numString = num.toString();
+    const digitArray = numString.split('');
+    let sum = 0;
+    for(const element of digitArray){
+        sum = sum + parseInt(element);
+    }
+    console.log(sum);
+}
+sumOfEachDigit(2456);
