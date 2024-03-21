@@ -385,6 +385,34 @@ function isDigit(char){
     return /^[0-9]$/.test(char);
 }
 
+// ======== ======== Problem-13
+// using if else
+function countDigit(number){
+    const numberString = number.toString();
+    const digitArray = numberString.split('');
+
+    let totalDigit = 0;
+    for(const each of digitArray){
+        totalDigit = totalDigit + 1;
+    }
+    console.log(totalDigit);
+}
+countDigit(5235);
+
+// ======== ======== Problem-14
+// using if else
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        console.log('Leap Year');
+    } else {
+        console.log('Not Leap Year');
+    }
+}
+isLeapYear(2000);
+isLeapYear(2004);
+isLeapYear(1900);
+isLeapYear(2021);
+
 
 
 
