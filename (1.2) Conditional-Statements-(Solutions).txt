@@ -122,3 +122,134 @@ function maxBetween(a, b){
 }
 maxBetween(10, 12);
 maxBetween(12, 10);
+
+// ======== ======== Problem-04
+// using if else
+function minBetween(a, b, c) {
+    let min = a;
+    let storeageMin;
+    let minValue;
+    if (min < b) {
+        storeageMin = min;
+        if (storeageMin < c) {
+            minValue = `${storeageMin} is min`;
+        } else {
+            minValue = `${c} is min`;
+        }
+    } else if (min < c) {
+        storeageMin = min;
+        if (storeageMin < b) {
+            minValue = `${storeageMin} is min`;
+        } else {
+            minValue = `${b} is min`
+        }
+    } else if(c < min){
+        storeageMin = c;
+        if(storeageMin < b){
+            minValue = `${storeageMin} is min`;
+        } else {
+            minValue = `${b} is min`
+        }
+    }
+    console.log(minValue);
+}
+minBetween(10, 12, 14);
+minBetween(14, 12, 10);
+minBetween(14, 10, 12);
+
+// using switch case
+function minBetween() {
+    const numbers = Array.from(arguments);
+    let min = numbers[0];
+    
+    for(let i = 0; i < numbers.length; i++){
+        switch(true){
+            case numbers[i] < min:
+                min = numbers[i];
+                break;
+        }
+    }
+    console.log(min);
+}
+minBetween(10, 12, 14);
+minBetween(14, 12, 10);
+minBetween(14, 10, 12);
+
+// using ternary operator
+    coming sooon....
+
+// ======== ======== Problem-05
+// using if else
+function checkDivisible(num) {
+    let result;
+    if(num % 5 === 0 || num % 11 === 0){
+        result = 'Yes,this num is divisible by 5 or 11';
+    } else {
+        result = 'No, this number is divisible neither 5 nor 11';
+    }
+    console.log(result)
+}
+checkDivisible(5);
+checkDivisible(11);
+checkDivisible(12);
+
+// using switch case
+function checkDivisible(num) {
+    switch (true) {
+        case num % 5 === 0 || num % 11 === 0:
+            console.log('Yes, this num is divisible by 5 or 11');
+            break;
+        default:
+            console.log('No, this num is neither divisible by 5 nor 11')
+    }
+}
+checkDivisible(5);
+checkDivisible(11);
+checkDivisible(12);
+
+// using ternary operator
+function checkDivisible(num) {
+    const check = num % 5 === 0 || num % 11 === 0 ? `${num} is divisible by 5 or 11` :
+                    `${num} is neither divisible by 5 nor 11`;
+    console.log(check);
+}
+checkDivisible(5);
+checkDivisible(11);
+checkDivisible(12);
+
+// ======== ======== Problem-06
+// using if else
+function checkEvenAndBetween(num) {
+    let result;
+    if(num > 100 && num < 200 && num % 2 === 0){
+        result = "Number is even and it is in between 100 & 200";
+    } else {
+        result = "Condition Not Fulfilled";
+    }
+    console.log(result)
+}
+checkEvenAndBetween(102);
+checkEvenAndBetween(50);
+
+// using switch case
+function checkEvenAndBetween(num) {
+    switch(true){
+        case num > 100 && num < 200 && num % 2 === 0:
+            console.log('Number is even and it is in between 100 & 200');
+            break;
+        default:
+            console.log('Condition Not Fulfilled');
+            break;
+    }
+}
+checkEvenAndBetween(102);
+checkEvenAndBetween(50);
+
+// using ternary operator
+function checkEvenAndBetween(num) {
+    const result = num > 100 && num < 200 && num % 2 === 0 ? "Number is even and it is in between 100 & 200" :
+                    "Condition Not Fulfilled";
+    console.log(result)
+}
+checkEvenAndBetween(102);
+checkEvenAndBetween(50);
