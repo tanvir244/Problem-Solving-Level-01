@@ -271,6 +271,120 @@ findDay(5);
 findDay(6);
 findDay(7);
 
+// ======== ======== Problem-08, 09, 10 easy
+// ======== ======== Problem-11
+// using if else
+function checkUpperLower(char) {
+    if(isUpperCase(char)){
+        console.log('This is UpperCase')
+    } else {
+        console.log('This is LowerCase')
+    }
+
+
+}
+checkUpperLower('D');
+checkUpperLower('d');
+
+function isUpperCase(char){
+    return char === char.toUpperCase();
+}
+
+// using switch case
+function checkUpperLower(char) {
+    switch(true){
+        case isUpperCase(char):
+            console.log('This is UpperCase');
+            break;
+        default:
+            console.log('This is LowerCase');
+            break;
+    }
+}
+checkUpperLower('D');
+checkUpperLower('d');
+
+function isUpperCase(char){
+    return char === char.toUpperCase()
+}
+
+// using ternary operator
+function checkUpperLower(char) {
+    const result = isUpperCase(char) ? 'This is UpperCase' : 'This is LowerCase';
+    console.log(result);
+}
+checkUpperLower('D');
+checkUpperLower('d');
+
+function isUpperCase(char){
+    return char === char.toUpperCase()
+}
+
+// ======== ======== Problem-12
+// using if else
+function checkAlphabetDigit(char){
+    if(isAlphabet(char)){
+        console.log('Alphabet');
+    } else if(isDigit(char)){
+        console.log('Digit');
+    } else{
+        console.log('Special Character');
+    }
+}
+checkAlphabetDigit('H');
+checkAlphabetDigit(7);
+checkAlphabetDigit('$');
+
+function isAlphabet(char){
+    return /^[a-zA-Z]$/.test(char);
+}
+function isDigit(char){
+    return /^[0-9]$/.test(char);
+}
+
+// using switch case
+function checkAlphabetDigit(char){
+    switch(true){
+        case isAlphabet(char):
+            console.log('Alphabet');
+            break;
+        case isDigit(char):
+            console.log('Digit');
+            break;
+        default:
+            console.log('Special Character');
+            break;
+    }
+}
+checkAlphabetDigit('H');
+checkAlphabetDigit(7);
+checkAlphabetDigit('$');
+
+function isAlphabet(char){
+    return /^[a-zA-Z]$/.test(char);
+}
+function isDigit(char){
+    return /^[0-9]$/.test(char);
+}
+
+// using ternary operator
+function checkAlphabetDigit(char){
+    const result = isAlphabet(char) ? 'Alphabet' :
+                        isDigit(char) ? 'Digit' :
+                            'Sepcial Character';
+    console.log(result);
+}
+checkAlphabetDigit('H');
+checkAlphabetDigit(7);
+checkAlphabetDigit('$');
+
+function isAlphabet(char){
+    return /^[a-zA-Z]$/.test(char);
+}
+function isDigit(char){
+    return /^[0-9]$/.test(char);
+}
+
 
 
 
