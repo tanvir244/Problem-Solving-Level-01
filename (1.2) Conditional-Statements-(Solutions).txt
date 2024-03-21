@@ -253,3 +253,24 @@ function checkEvenAndBetween(num) {
 }
 checkEvenAndBetween(102);
 checkEvenAndBetween(50);
+
+// ======== ======== Problem-07
+function findDay(th) {
+    let expectedDay;
+    const days = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    for(let i = 0; i < days.length; i++){
+        expectedDay = days[th - 1]
+    }
+    console.log(expectedDay);
+}
+findDay(1);
+findDay(2);
+findDay(3);
+findDay(4);
+findDay(5);
+findDay(6);
+findDay(7);
+
+
+
+
